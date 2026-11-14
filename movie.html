@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore movie details on Movie Mint.">
+    <title>Movie Details | Movie Mint</title>
+
+    <link rel="stylesheet" href="assets/css/polish.css">
+    <link rel="stylesheet" href="assets/css/storage.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/movie-details.css">
+</head>
+<body>
+    <header id="site-header"></header>
+
+    <main class="page-main details-page">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="index.html">Home</a>
+            <span aria-hidden="true">/</span>
+            <a href="movies.html">Movies</a>
+            <span aria-hidden="true">/</span>
+            <span id="breadcrumb-title">Details</span>
+        </nav>
+
+        <section id="movie-details" class="movie-details" aria-live="polite">
+            <div class="details-loading">
+                <p>Loading movie details...</p>
+            </div>
+        </section>
+
+        <section id="related-section" class="related-section" hidden>
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">KEEP EXPLORING</p>
+                    <h2>Related Movies</h2>
+                </div>
+                <a href="movies.html" class="text-link">Browse all movies</a>
+            </div>
+
+            <div id="related-movies" class="movie-grid"></div>
+        </section>
+    </main>
+
+    <footer id="site-footer"></footer>
+
+    
+    <script src="assets/js/components/header.js" defer></script>
+    <script src="assets/js/components/footer.js" defer></script>
+    <script src="assets/js/data/movies.js" defer></script>
+    <script src="assets/js/storage.js" defer></script>
+    <script src="assets/js/components/movieCard.js" defer></script>
+    <script src="assets/js/storage-ui.js" defer></script>
+    <script src="assets/js/download.js" defer></script>
+    <script src="assets/js/movie-details.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+
+</body>
+</html>

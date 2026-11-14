@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Browse and discover movies with Movie Mint. Search by title, filter by genre, and sort the collection.">
+
+    <meta name="theme-color" content="#0b0f0e">
+
+    <title>Browse Movies | Movie Mint</title>
+
+    <link rel="stylesheet" href="assets/css/polish.css">
+    <link rel="stylesheet" href="assets/css/storage.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/movies.css">
+
+    <!-- Shared interface -->
+    <script src="assets/js/components/header.js" defer></script>
+    <script src="assets/js/components/footer.js" defer></script>
+
+    <!-- Reuse Phase 2 movie data and cards -->
+    <script src="assets/js/data/movies.js" defer></script>
+    <script src="assets/js/components/movieCard.js" defer></script>
+    <script src="assets/js/movies.js" defer></script>
+    <script src="assets/js/storage.js" defer></script>
+    <script src="assets/js/storage-ui.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+</head>
+
+<body>
+    <div id="site-header"></div>
+
+    <main class="page-main browse-page">
+        <section class="browse-intro" aria-labelledby="browse-title">
+            <span class="eyebrow">THE MOVIE COLLECTION</span>
+
+            <h1 id="browse-title">
+                Explore <span>Movies</span>
+            </h1>
+
+            <p>
+                Search stories, discover genres, and find your next movie.
+            </p>
+        </section>
+
+        <section class="browse-controls" aria-label="Movie search and filters">
+            <div class="search-field">
+                <label for="movie-search">Search movies</label>
+
+                <div class="search-input-wrap">
+                    <span class="search-symbol" aria-hidden="true">⌕</span>
+                    <input
+                        id="movie-search"
+                        type="search"
+                        name="movie-search"
+                        placeholder="Search by movie title..."
+                        autocomplete="off"
+                    >
+                </div>
+            </div>
+
+            <div class="filter-field">
+                <label for="genre-filter">Filter by genre</label>
+
+                <select id="genre-filter" name="genre-filter">
+                    <option value="">All genres</option>
+                </select>
+            </div>
+
+            <div class="filter-field">
+                <label for="sort-filter">Sort movies</label>
+
+                <select id="sort-filter" name="sort-filter">
+                    <option value="newest">Newest first</option>
+                    <option value="oldest">Oldest first</option>
+                    <option value="title-asc">Title: A to Z</option>
+                    <option value="title-desc">Title: Z to A</option>
+                </select>
+            </div>
+
+            <button
+                class="clear-filters-button"
+                id="clear-filters"
+                type="button"
+            >
+                Clear filters
+            </button>
+        </section>
+
+        <section class="browse-results" aria-labelledby="results-title">
+            <div class="results-heading">
+                <h2 id="results-title">All <span>Movies</span></h2>
+
+                <p id="results-count" aria-live="polite">
+                    Loading movies...
+                </p>
+            </div>
+
+            <div
+                class="movie-grid browse-movie-grid"
+                id="browse-movie-grid"
+                aria-live="polite"
+            ></div>
+        </section>
+    </main>
+
+    <div id="site-footer"></div>
+
+    
+</body>
+</html>
